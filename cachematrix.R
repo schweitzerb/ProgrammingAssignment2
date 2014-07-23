@@ -1,8 +1,12 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Contains two functions that allow caching of the inverse of a matrix in order
+## to avoid having to calculate the inverse too many time. This is achieved by 
+## creating a special "CacheMatrix" which implements this behavior. The inverse
+## will not be calculated until explicitly needed and then stored in chache.
 
-## creates a "CacheMatrix", which is a list that houses functions to handle the
-## input matrix
+
+## makeCacheMatrix()
+## creates a "CacheMatrix", which is a list that houses functions to store and
+## handle the input matrix
 
 makeCacheMatrix <- function(x = matrix()) {
       
@@ -27,7 +31,7 @@ makeCacheMatrix <- function(x = matrix()) {
            setinverse = setinverse, getinverse = getinverse)
 }
 
-
+## cacheSolve()
 ## returns the inverse of the input matrix, either from chache or by using 
 ## solve() to calcualate the inverse
 
